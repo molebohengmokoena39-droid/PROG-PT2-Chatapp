@@ -44,3 +44,20 @@ CLoudCHat2/
 - **Java** 8 or higher (JDK)
 - **Apache Ant** (or NetBeans IDE, which includes Ant)
 - **org.json** library (for JSON message persistence)
+---
+
+## Getting Started
+
+### Running in NetBeans
+
+1. Open NetBeans IDE.
+2. Go to **File → Open Project** and select the `CLoudCHat2` project folder.
+3. Right-click the project and select **Clean and Build**.
+4. Click **Run** (or press F6).
+
+### Running with Ant (command line)
+
+```bash
+ant clean build
+ant run
+```
