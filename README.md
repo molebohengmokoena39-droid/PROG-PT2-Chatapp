@@ -39,3 +39,8 @@ CLoudCHat2/
 ├── build.xml                          # Apache Ant build file (NetBeans)
 └── README.md
 ```
+## Requirements
+
+- **Java** 8 or higher (JDK)
+- **Apache Ant** (or NetBeans IDE, which includes Ant)
+- **org.json** library (for JSON message persistence)
