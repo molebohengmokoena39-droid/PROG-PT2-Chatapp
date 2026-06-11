@@ -61,3 +61,42 @@ CLoudCHat2/
 ant clean build
 ant run
 ```
+## Data Files
+
+### `users.txt`
+Stores registered users in CSV format:
+```
+username,password,phone,firstName,lastName
+```
+Example:
+```
+kyl_1,Ch&&sec@ke99!,+271234567890,Kyle,Smith
+```
+
+> **Note:** The current implementation does not deduplicate entries — registering the same username multiple times will append duplicate rows. This is a known issue.
+
+### `messages.json`
+Stores sent and stored messages as a JSON array. Each message object includes:
+
+| Field | Description |
+|---|---|
+| `messageId` | Unique identifier for the message |
+| `messageHash` | Hash string in the format `count:id:content` |
+| `recipient` | Recipient phone number |
+| `messageContent` | The message text |
+| `numMessagesSent` | Running count of messages processed |
+| `timestamp` | Unix timestamp (milliseconds) |
+
+---
+
+## Usage
+
+1. **Launch** the application — the Login screen appears by default.
+2. **Register** a new account via the Register panel, then return to Login.
+3. **Log in** with your credentials to access the Chat panel.
+4. In the Chat panel:
+   - Enter a recipient phone number (format: `+27XXXXXXXXX`)
+   - Type your message
+   - Choose **Send Message**, **Store Message**, or **Disregard Message**
+5. The message log updates automatically after each action.
+6. Click **View All Stored Messages** to see the full message history.
